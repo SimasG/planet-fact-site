@@ -1,3 +1,62 @@
-body {
-    background-color: yellow;
+// COLORS
+$white: #FFFFFF;
+$backgroundColor: #070724;
+$blueGrey: #38384F;
+$grey: #838391;
+$lightBlue: #419EBB;
+$darkYellow: #EDA249;
+$purple: #6f2ed6;
+$lightRed: #D14C32;
+$red: #D83A34;
+$orange: #2e2a28;
+$lightGreen: #1ec2a4;
+$blue: #2d68f0;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Antonio', sans-serif;
+    font-family: 'Spartan', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-image: url('../assets/background-stars.svg');
+    position: relative;
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    background-color: #070724;
+}
+
+:root {
+    /* TYPOGRAPHY */
+    /* Font Size - Mobile */
+    --heading: 8rem;
+    --heading-secondary: 4rem;
+    --heading-tertiary: 1.2rem;
+    --heading-quarternary: 1.1rem
+    --paragraph: 1.4rem;
+}
+
+h1, h2, h3, h4, p, li, span {
+    color: white;
+}
+
+h1 {
+    line-height: 10.3rem;
+    font-size: var(--heading);
+}
+
+.hide-for-mobile {
+    display: none;
+}
+
+.active {
+    display: block;
 }

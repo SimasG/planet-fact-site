@@ -1,8 +1,39 @@
-body {
-  background-color: yellow;
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Antonio', sans-serif;
+  font-family: 'Spartan', sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-image: url("../assets/background-stars.svg");
+  position: relative;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center;
+  top: 0;
+  left: 0;
+  background-color: #070724;
 }
 
 h1 {
   font-size: 60px;
+}
+
+.main__hero {
+  display: none;
+}
+
+.main .active {
+  display: block;
+}
+
+h1 {
+  color: white;
 }
 /*# sourceMappingURL=styles.css.map */
