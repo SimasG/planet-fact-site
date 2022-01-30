@@ -24,18 +24,69 @@
             .header__menu-nav {
                 position: fixed;
                 width: 100%;
-                top: 12rem;
-                padding: 6.7rem 2.4rem;
+                padding: 0 2.4rem 6.7rem 2.4rem;
+                top: 11.3rem;
                 .header__menu-item {
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: 2fr 4fr 6fr;
+                    grid-template-rows: 1 1fr;
+                    grid-template-areas: "icon planet-name arrow";
                     justify-content: space-between;
                     align-items: center;
-                    
+                    padding: 2rem 0;
                     .planet-icon {
-                        color: red;
+                        position: relative;
+                        // background: red;
                         width: 2rem;
                         height: 2rem;
+                        border-radius: 90px;
+                        grid-area: icon;
                     }
+                    #mercury {
+                        background: #DEF4FC;
+                    }
+                    #venus {
+                        background: #F7CC7F;
+                    }
+                    #earth {
+                        background: #545BFE;
+                    }
+                    #mars {
+                        background: #FF6A45;
+                    }
+                    #jupiter {
+                        background: #ECAD7A;
+                    }
+                    #saturn {
+                        background: #FCCB6B;
+                    }
+                    #uranus {
+                        background: #65F0D5;
+                    }
+                    #neptune {
+                        background: #497EFA;
+                    }
+                    .planet-name.mobile {
+                        grid-area: planet-name;
+                        font-family: 'Spartan', sans-serif;
+                        font-size: 1.5rem;
+                        line-height: 2.5rem;
+                        letter-spacing: 0.136rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                    .menu-arrow {
+                        width: 1rem;
+                        height: 1rem;
+                        background: red;
+                        grid-area: arrow;
+                    }
+                }
+                .header__menu-item:first-child {
+                    padding-top: 0;
+                }
+                .header__menu-item:last-child {
+                    padding-bottom: 0;
                 }
             }
         }
