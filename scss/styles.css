@@ -13,7 +13,7 @@ html {
   overflow-x: hidden;
   background-image: url("../assets/background-stars.svg");
   position: relative;
-  background-size: contain;
+  background-size: 300%;
   background-repeat: repeat;
   background-position: center;
   top: 0;
@@ -31,8 +31,10 @@ html {
   --paragraph: 1.4rem;
 }
 
-h1, h2, h3, h4, p, li, ul, span {
+h1, h2, h3, h4, p, li, ul, span, a {
   color: white;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 h1 {
@@ -98,6 +100,45 @@ p {
   font-size: 2.8rem;
   letter-spacing: -0.105rem;
   text-transform: uppercase;
+}
+
+.header .header__nav-container .header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #070722;
+  display: none;
+}
+
+.header .header__nav-container .header__menu .header__menu-nav {
+  position: fixed;
+  width: 100%;
+  top: 12rem;
+  padding: 6.7rem 2.4rem;
+}
+
+.header .header__nav-container .header__menu .header__menu-nav .header__menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .header__nav-container .header__menu .header__menu-nav .header__menu-item .planet-icon {
+  color: red;
+  width: 2rem;
+  height: 2rem;
+}
+
+.header .header__nav-container .header__menu.active {
+  display: block;
 }
 
 .main__hero {
