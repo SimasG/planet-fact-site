@@ -1,11 +1,11 @@
 .header {
+    padding: 2.4rem;
     .header__nav-container {
         .header__nav-container-child {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2.4rem;
-            border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+            // border-bottom: 1px solid rgba(151, 151, 151, 0.3);
             &.active {
                 display: none;
             }

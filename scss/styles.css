@@ -23,7 +23,9 @@ html {
 
 /* TYPOGRAPHY */
 :root {
-  /* Font Size - Mobile */
+  --heading-mobile: 4rem;
+  --paragraph-mobile: 1.1rem;
+  /* Font Size - Desktop */
   --heading: 8rem;
   --heading-secondary: 4rem;
   --heading-tertiary: 1.2rem;
@@ -82,6 +84,10 @@ p {
   display: block;
 }
 
+.header {
+  padding: 2.4rem;
+}
+
 .header .header__nav-container .header__nav-container-child {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,8 +98,6 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.4rem;
-  border-bottom: 1px solid rgba(151, 151, 151, 0.3);
 }
 
 .header .header__nav-container .header__nav-container-child.active {
@@ -350,15 +354,155 @@ p {
   }
 }
 
-.main__hero {
+.main .main__container .main__tabs {
+  padding: 2rem 3.7rem;
+  border-top: 1px solid rgba(151, 151, 151, 0.3);
+  border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+}
+
+.main .main__container .main__tabs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main__container .main__tabs ul .main__tab {
+  position: relative;
+  font-family: 'Spartan', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.193rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.6;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.main .main__container .main__tabs ul .main__tab::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.4rem;
+  background: red;
+  top: 2.7rem;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.main .main__container .main__tabs ul .main__tab:hover {
+  opacity: 1;
+}
+
+.main .main__container .main__tabs ul .main__tab:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.main .main__container .main__hero {
   display: none;
+  padding: 2.4rem;
 }
 
-.main .active {
+.main .main__container .main__hero .main__img {
+  text-align: center;
+  padding-top: 9.8rem;
+  padding-bottom: 9.8rem;
+}
+
+.main .main__container .main__hero .main__img img {
+  height: 11.1rem;
+  margin: 0 auto;
+}
+
+.main .main__container .main__hero .main__text {
+  text-align: center;
+}
+
+.main .main__container .main__hero .main__text .main__text-heading {
+  font-size: var(--heading-mobile);
+}
+
+.main .main__container .main__hero .main__text .main__text-paragraph {
+  font-family: 'Spartan', sans-serif;
+  font-size: var(--paragraph-mobile);
+  line-height: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.main .main__container .main__hero .main__text .main__text-source {
+  font-family: 'Spartan', sans-serif;
+  font-size: var(--heading-tertiary);
+  line-height: 2.5rem;
+  opacity: 0.4;
+  font-weight: 400;
+  top: -0.5rem;
+}
+
+.main .main__container .main__hero .main__text .main__text-source-link {
+  text-decoration: underline;
+  font-weight: 700;
+  cursor: pointer;
+  top: -0.5rem;
+}
+
+.main .main__container .main__hero .main__table {
+  margin: 2.8rem 0;
+}
+
+.main .main__container .main__hero .main__table .main__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid rgba(151, 151, 151, 0.3);
+  padding: 1.05rem 2.3rem;
+  margin: 0.8rem 0;
+}
+
+.main .main__container .main__hero .main__table .main__item .main__item-title {
+  font-family: 'Spartan', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.073rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.6;
+}
+
+.main .main__container .main__hero .main__table .main__item .main__item-info {
+  font-family: 'Antonio', sans-serif;
+  font-size: 2rem;
+  line-height: auto;
+  letter-spacing: -0.075rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main .main__container .main__hero .main__table .main__item:first-child {
+  margin-top: 0;
+}
+
+.main .main__container .main__hero .main__table .main__item:last-child {
+  margin-bottom: 0;
+}
+
+.main .main__container .active {
   display: block;
-}
-
-h1 {
-  color: white;
 }
 /*# sourceMappingURL=styles.css.map */

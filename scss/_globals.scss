@@ -36,7 +36,11 @@ html {
 
 /* TYPOGRAPHY */
 :root {
-    /* Font Size - Mobile */
+    // Font Size - Mobile
+        --heading-mobile: 4rem;
+        --paragraph-mobile: 1.1rem;
+
+    /* Font Size - Desktop */
         --heading: 8rem;
         --heading-secondary: 4rem;
         --heading-tertiary: 1.2rem;
