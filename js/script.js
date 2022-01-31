@@ -22,3 +22,24 @@ hamburger.addEventListener('click', () => {
 
 
 // tabs
+const mainContainer = document.querySelector('.main__container');
+const tabs = document.querySelectorAll('.main__tab');
+const contents = document.querySelectorAll('.main__hero');
+
+mainContainer.addEventListener('click', (e) => {
+    const id = e.target.dataset.id;
+
+    if (id) {
+        tabs.forEach(btn => {
+            btn.classList.remove('active');
+            e.target.classList.add('active');
+        })
+
+        contents.forEach(content => {
+            content.classList.remove('active');
+        })
+
+        const element = document.getElementById(id);
+        element.classList.add('active');
+    }
+})
