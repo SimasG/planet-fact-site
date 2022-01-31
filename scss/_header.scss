@@ -139,3 +139,44 @@
         }
     }
 }
+
+
+
+// TABLET MEDIA QUERIES
+@media (min-width: 768px) {
+    .header {
+        .header__nav-container {
+            .header__nav-container-child {
+                text-align: center;
+                display: block;
+                border-bottom: none;
+            }
+            .header__logo {
+                margin: 0 auto;
+            }
+            .header__toggle {
+                display: none;
+            }
+            .header__links {
+                display: block;
+            }
+            .header__links-list {
+                display: flex;
+                justify-content: space-around;
+                .planet-name {
+                    font-family: 'Spartan', sans-serif;
+                    font-size: var(--heading-quarternary);
+                    line-height: 2.5rem;
+                    letter-spacing: 0.1rem;
+                    // height: 2rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+
+
+}

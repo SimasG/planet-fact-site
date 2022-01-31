@@ -87,9 +87,19 @@ p {
     line-height: 2.5rem;
 }
 
+// Visibility 
 .hide-for-mobile {
     display: none;
+    // @include breakpoint-down(small){
+    //     display: none;
+    // }
 }
+
+// .hide-for-desktop {
+    // @include breakpoint-up(large) {
+    //     display: none;
+    // }
+// }
 
 .active {
     display: block;
