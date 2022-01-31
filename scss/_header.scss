@@ -157,13 +157,15 @@
             .header__toggle {
                 display: none;
             }
-            .header__links {
-                display: block;
-            }
+        .header__links {
+            padding: 3rem 4rem;
+            display: block;
             .header__links-list {
                 display: flex;
                 justify-content: space-around;
+                }
                 .planet-name {
+                    position: relative;
                     font-family: 'Spartan', sans-serif;
                     font-size: var(--heading-quarternary);
                     line-height: 2.5rem;
@@ -172,11 +174,64 @@
                     text-transform: uppercase;
                     font-weight: 700;
                     opacity: 0.6;
-                }
+                    &:hover {
+                        opacity: 1;
+                        transition: opacity ease-in-out 0.5s;
+                    }
             }
+        }
+        .header__underline {
+            display: block;
+            width: 100%;
+            height: 0.1rem;
+            background: #979797;
+            opacity: 0.3;
+        }
         }
     }
 
 
+}
 
+
+@media (min-width: 1024px) {
+    .header {
+        .header__nav-container {
+            display: grid;
+            justify-items: start;
+            align-items: center;
+            grid-template-columns: 2fr 2fr;
+            grid-template-rows: 1 1fr;
+            // grid-template-areas: "logo planet-name";
+            // justify-content: space-between;
+            // align-items: center;
+            border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+            .header__links {
+                width: 100%;
+                .header__links-list {
+                    .planet-name {
+                        // finish the pseudo elements once I plug in json files
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 0.4rem;
+                            background: red;
+                            top: -3.6rem;
+                            transform: scaleX(0);
+                            transition: transform 0.3s ease;
+                        }
+                        &:hover {
+                            &::before {
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+            .header__underline {
+                display: none;
+            }
+        }
+    }
 }

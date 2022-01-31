@@ -276,16 +276,18 @@ p {
     display: none;
   }
   .header .header__nav-container .header__links {
+    padding: 3rem 4rem;
     display: block;
   }
-  .header .header__nav-container .header__links-list {
+  .header .header__nav-container .header__links .header__links-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .header .header__nav-container .header__links-list .planet-name {
+  .header .header__nav-container .header__links .planet-name {
+    position: relative;
     font-family: 'Spartan', sans-serif;
     font-size: var(--heading-quarternary);
     line-height: 2.5rem;
@@ -293,6 +295,58 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     opacity: 0.6;
+  }
+  .header .header__nav-container .header__links .planet-name:hover {
+    opacity: 1;
+    -webkit-transition: opacity ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.5s;
+  }
+  .header .header__nav-container .header__underline {
+    display: block;
+    width: 100%;
+    height: 0.1rem;
+    background: #979797;
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header .header__nav-container {
+    display: -ms-grid;
+    display: grid;
+    justify-items: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: 2fr 2fr;
+        grid-template-columns: 2fr 2fr;
+    -ms-grid-rows: 1 1fr;
+        grid-template-rows: 1 1fr;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+  }
+  .header .header__nav-container .header__links {
+    width: 100%;
+  }
+  .header .header__nav-container .header__links .header__links-list .planet-name::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.4rem;
+    background: red;
+    top: -3.6rem;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: -webkit-transform 0.3s ease;
+    transition: -webkit-transform 0.3s ease;
+    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  }
+  .header .header__nav-container .header__links .header__links-list .planet-name:hover::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .header .header__nav-container .header__underline {
+    display: none;
   }
 }
 
