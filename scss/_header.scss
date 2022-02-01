@@ -23,7 +23,7 @@
                 &.active {
                     color: #979797;
                     opacity: 0.3;
-                    z-index: 100; 
+                    z-index: 100;
                 }
             }
         }
@@ -36,6 +36,7 @@
             bottom: 0;
             background: $backgroundColor;
             display: none;
+            overflow: hidden;
             .header__menu-nav {
                 position: fixed;
                 width: 100%;

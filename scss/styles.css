@@ -33,7 +33,7 @@ html {
   --paragraph: 1.4rem;
 }
 
-h1, h2, h3, h4, p, li, ul, span, a {
+h1, h2, h3, h4, p, li, ul, span, a, button {
   color: white;
   list-style-type: none;
   text-decoration: none;
@@ -133,6 +133,7 @@ p {
   bottom: 0;
   background: #070722;
   display: none;
+  overflow: hidden;
 }
 
 .header .header__nav-container .header__menu .header__menu-nav {
@@ -358,9 +359,6 @@ p {
   padding: 2rem 3.7rem;
   border-top: 1px solid rgba(151, 151, 151, 0.3);
   border-bottom: 1px solid rgba(151, 151, 151, 0.3);
-}
-
-.main .main__container .main__tabs ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,7 +370,7 @@ p {
           align-items: center;
 }
 
-.main .main__container .main__tabs ul .main__tab {
+.main .main__container .main__tabs .main__tab {
   position: relative;
   font-family: 'Spartan', sans-serif;
   font-size: 0.9rem;
@@ -383,9 +381,11 @@ p {
   cursor: pointer;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  background: transparent;
+  border: none;
 }
 
-.main .main__container .main__tabs ul .main__tab::before {
+.main .main__container .main__tabs .main__tab::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -400,13 +400,17 @@ p {
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
-.main .main__container .main__tabs ul .main__tab:hover {
+.main .main__container .main__tabs .main__tab:hover {
   opacity: 1;
 }
 
-.main .main__container .main__tabs ul .main__tab:hover::before {
+.main .main__container .main__tabs .main__tab:hover::before {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+}
+
+.main .main__container .main__tabs.active {
+  display: none;
 }
 
 .main .main__container .main__hero {
@@ -423,6 +427,18 @@ p {
 .main .main__container .main__hero .main__img img {
   height: 11.1rem;
   margin: 0 auto;
+}
+
+.main .main__container .main__hero .main__img .main__img-child-mercury img {
+  height: 11.1rem;
+  margin: 0 auto;
+}
+
+.main .main__container .main__hero .main__img .main__img-child-surface > img {
+  height: 7rem;
+  margin: 0 auto;
+  margin-top: -3rem;
+  z-index: 100;
 }
 
 .main .main__container .main__hero .main__text {
