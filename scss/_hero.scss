@@ -1,0 +1,131 @@
+.main {
+    .main__container {
+        .main__tabs {
+            padding: 2rem 3.7rem;
+            border-top: 1px solid rgba(151, 151, 151, 0.3);
+            border-bottom: 1px solid rgba(151, 151, 151, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .main__tab {
+                position: relative;
+                font-family: 'Spartan', sans-serif;
+                font-size: 0.9rem;
+                letter-spacing: 0.193rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                opacity: 0.6;
+                cursor: pointer;
+                transition: opacity 0.3s ease-in-out;
+                background: transparent;
+                border: none;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 0.4rem;
+                    background: red;
+                    top: 2.7rem;
+                    transform: scaleX(0);
+                    transition: transform 0.3s ease;
+                }
+                &:hover {
+                    opacity: 1;
+                    &::before {
+                        transform: scaleX(1);
+                    }
+                }
+            }
+        }
+        .main__tabs.active {
+            display: none;
+        }
+        .main__hero {
+            display: none;
+            padding: 2.4rem;
+            .main__img {
+                text-align: center;
+                padding-top: 9.8rem;
+                padding-bottom: 9.8rem;
+                img {
+                    // width: 11.1rem;
+                    height: 11.1rem;
+                    margin: 0 auto;
+                }
+                .main__img-child-mercury img {
+                    height: 11.1rem;
+                    margin: 0 auto; 
+                }
+                .main__img-child-surface > img {
+                    height: 7rem;
+                    margin: 0 auto;
+                    margin-top: -3rem;
+                    z-index: 100;
+                }
+            }
+            .main__text {
+                text-align: center;
+                .main__text-heading {
+                    font-size: var(--heading-mobile);
+                }
+                .main__text-paragraph {
+                    font-family: 'Spartan', sans-serif;
+                    font-size: var(--paragraph-mobile);
+                    line-height: 2.5rem;
+                    padding-bottom: 3rem;
+                }
+                .main__text-source {
+                    font-family: 'Spartan', sans-serif;
+                    font-size: var(--heading-tertiary);
+                    line-height: 2.5rem;
+                    opacity: 0.4;
+                    font-weight: 400;
+                    top: -0.5rem;
+                }
+                .main__text-source-link {
+                    text-decoration: underline;
+                    font-weight: 700;
+                    cursor: pointer;
+                    top: -0.5rem;
+                }
+            }
+            .main__table {
+                margin: 2.8rem 0;
+                .main__item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid rgba(151, 151, 151, 0.3);
+                    padding: 1.05rem 2.3rem;
+                    margin: 0.8rem 0;
+                    .main__item-title {
+                        font-family: 'Spartan', sans-serif;
+                        font-size: 0.8rem;
+                        line-height: 1.6rem;
+                        letter-spacing: 0.073rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        opacity: 0.6;
+                    }
+                    .main__item-info {
+                        font-family: 'Antonio', sans-serif;
+                        font-size: 2rem;
+                        line-height: auto;
+                        letter-spacing: -0.075rem;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                    }
+                }
+                .main__item:first-child {
+                    margin-top: 0;
+                }
+                .main__item:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .active {
+            display: block;
+        }
+    }
+}
