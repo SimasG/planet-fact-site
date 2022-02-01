@@ -549,8 +549,8 @@ p {
             align-items: center;
     -ms-grid-columns: (3fr)[4];
         grid-template-columns: repeat(4, 3fr);
-    -ms-grid-rows: 15fr 9fr 4fr;
-        grid-template-rows: 15fr 9fr 4fr;
+    -ms-grid-rows: 13fr 9fr 4fr;
+        grid-template-rows: 13fr 9fr 4fr;
         grid-template-areas: "planet planet planet planet" "text text tabs tabs" "table table table table";
   }
   .main .main__container .main__hero.active .main__img {
@@ -585,6 +585,9 @@ p {
   .main .main__container .main__hero.active .main__text .main__text-heading {
     font-size: var(--heading-secondary-tablet);
   }
+  .main .main__container .main__hero.active .main__text .main__text-paragraph {
+    padding-right: 1rem;
+  }
   .main .main__container .main__hero.active .main__tabs.hide-for-mobile {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
@@ -606,11 +609,31 @@ p {
     padding: 0;
     border: none;
     justify-self: end;
+    margin-top: 4rem;
   }
   .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab {
     width: 28.1rem;
     height: 4rem;
     margin: 0.8rem 0;
+    line-height: 2.5rem;
+    text-align: left;
+    padding: 0 1.9rem;
+    color: --white;
+    opacity: 1;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab::before {
+    display: none;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab:hover {
+    background: rgba(216, 216, 216, 0.2);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab:hover::before {
+    display: none;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab.active {
+    background: #419EBB;
   }
   .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab:first-child {
     margin-top: 0;
@@ -619,8 +642,13 @@ p {
     margin-bottom: 0;
   }
   .main .main__container .main__hero.active .main__tabs.hide-for-mobile .tab_number {
-    height: 4rem;
-    width: 4rem;
+    color: var(--white);
+    opacity: 0.6;
+    margin-right: 1.4rem;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .tab_title {
+    color: white;
+    opacity: 1;
   }
   .main .main__container .main__hero.active .main__table {
     -ms-grid-row: 3;

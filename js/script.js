@@ -27,13 +27,15 @@ hamburger.addEventListener('click', () => {
 
 
 
-// tabs
+// tabs -> having troubles with tablet/desktop setup
 const tabs = document.querySelectorAll('.main__tab');
 const mainContainer = document.querySelector('.main__container');
 const contents = document.querySelectorAll('.main__hero');
 
 mainContainer.addEventListener('click', (e) => {
+    console.log("eyooo");
     const id = e.target.dataset.id;
+    console.log(id);
 
     if (id) {
         tabs.forEach(btn => {
