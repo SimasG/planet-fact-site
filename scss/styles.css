@@ -293,8 +293,9 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .header .header__nav-container .header__links .planet-name {
     position: relative;
@@ -320,7 +321,7 @@ p {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1300px) {
   .header .header__nav-container {
     display: -ms-grid;
     display: grid;
@@ -332,7 +333,6 @@ p {
         grid-template-columns: 2fr 2fr;
     -ms-grid-rows: 1 1fr;
         grid-template-rows: 1 1fr;
-    border-bottom: 1px solid rgba(151, 151, 151, 0.3);
   }
   .header .header__nav-container .header__links {
     width: 100%;
@@ -672,6 +672,89 @@ p {
     width: 16.4rem;
     height: 8.8rem;
     margin: 2rem 0 0 0;
+    text-align: left;
+    padding: 1.8rem 1.5rem 2.1rem 1.5rem;
+  }
+  .main .main__container .main__hero.active .main__table .main__item .main__item-title {
+    margin-bottom: 0.5rem;
+  }
+  .main .main__container .main__hero.active .main__table .main__item .main__item-info {
+    font-size: 2.4rem;
+    letter-spacing: -0.09rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  .main .main__container .main__hero.active {
+    padding: 8rem 16.5rem 5.6rem 16.5rem;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: (3fr)[4];
+        grid-template-columns: repeat(4, 3fr);
+    -ms-grid-rows: 4fr 2fr 2fr;
+        grid-template-rows: 4fr 2fr 2fr;
+        grid-template-areas: "planet planet text text" "planet planet tabs tabs" "table table table table";
+  }
+  .main .main__container .main__hero.active .main__img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: planet;
+  }
+  .main .main__container .main__hero.active .main__img img {
+    height: 29rem;
+  }
+  .main .main__container .main__hero.active .main__text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: text;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 2;
+    grid-area: tabs;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab::before {
+    display: none;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab:hover {
+    background: rgba(216, 216, 216, 0.2);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab:hover::before {
+    display: none;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab.active {
+    background: #419EBB;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab:first-child {
+    margin-top: 0;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab:last-child {
+    margin-bottom: 0;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .tab_number {
+    color: var(--white);
+    opacity: 0.6;
+    margin-right: 1.4rem;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .tab_title {
+    color: white;
+    opacity: 1;
+  }
+  .main .main__container .main__hero.active .main__table {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+    grid-area: table;
   }
 }
 /*# sourceMappingURL=styles.css.map */

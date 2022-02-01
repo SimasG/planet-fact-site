@@ -165,7 +165,7 @@
             display: block;
             .header__links-list {
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
                 }
                 .planet-name {
                     position: relative;
@@ -197,7 +197,7 @@
 }
 
 // DESKTOP MEDIA QUERIES
-@media (min-width: 1024px) {
+@media (min-width: 1300px) {
     .header {
         .header__nav-container {
             display: grid;
@@ -208,7 +208,6 @@
             // grid-template-areas: "logo planet-name";
             // justify-content: space-between;
             // align-items: center;
-            border-bottom: 1px solid rgba(151, 151, 151, 0.3);
             .header__links {
                 width: 100%;
                 .header__links-list {
