@@ -141,19 +141,18 @@
                 display: none;
                 border: none;
                 .main__tab {
-
+                    border: 1px solid rgba(151, 151, 151, 0.3);
                 }
             }
             // MY FIRST BIG GRID EXPERIMENT
             .main__hero.active {
+                padding: 2.5rem 3.9rem;
+
                 display: grid;
                 justify-items: center;
                 align-items: center;
                 grid-template-columns: repeat(4, 3fr);
-                // grid-template-rows: repeat(3, 1fr);
                 // grid-template-columns: 3fr 3fr 3fr 3fr;
-                // grid-template-rows: 5.4fr 2.9fr 0.17fr;
-                // grid-template-rows: 5fr 3fr 2fr;
                 grid-template-rows: 15fr 9fr 4fr;
 
 
@@ -161,12 +160,11 @@
                 grid-template-areas: 
                     "planet planet planet planet"
                     "text text tabs tabs"
-                    "table table table table"
-                    ;
+                    "table table table table";
                .main__img {
                     grid-area: planet;              
-                    // grid-column: 1/5;
-                    // grid-row: 1/2;
+                    grid-column: 1/5;
+                    grid-row: 1/2;
 
                     // OR
                     // grid-column-start: 1;
@@ -180,11 +178,12 @@
                }
                .main__text {
                     grid-area: text;              
+                    grid-column: 1/3;
+                    grid-row: 2/3;
+
+                   text-align: left;
                    .main__text-heading {
-                    // grid-column-start: 1;
-                    // grid-column-end: 5;
-                    // grid-row-start: row1-start;
-                    // grid-row-end: 2;   
+                    font-size: var(--heading-secondary-tablet);
                    }
                    .main__text-paragraph {
 
@@ -198,10 +197,33 @@
                        }
                    }
                }
-               .main__tabs.hide-for-mobile {
-                grid-area: tabs;              
-                display: block;
+                .main__tabs.hide-for-mobile {
+                grid-area: tabs;  
+                grid-column: 3/5;
+                grid-row: 2/3;
+                
+                display: flex;
+                flex-direction: column;
+
+                padding: 0;
                 border: none;
+                justify-self: end;
+                .main__tab {
+                    width: 28.1rem;
+                    height: 4rem;
+                    margin: 0.8rem 0;
+                }
+                .main__tab:first-child {
+                    margin-top: 0;
+                }
+                .main__tab:last-child {
+                    margin-bottom: 0;
+                }
+                .tab_number {
+                    height: 4rem;
+                    width: 4rem;
+                }
+
                }
                .main__table {
                     grid-area: table;
@@ -209,14 +231,15 @@
                     // grid-row: 3/4;
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
+                    // not sure why the align-items doesn't work
+                    align-items: flex-end;
                     width: 100%;
                     margin: 0;
                     .main__item {
                         display: block;
                         width: 16.4rem;
                         height: 8.8rem;
-                        margin: 0;
+                        margin: 2rem 0 0 0;
                     }
                }
             }
