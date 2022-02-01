@@ -40,6 +40,9 @@
         .main__tabs.active {
             display: none;
         }
+        .main__tabs.hide-for-mobile {
+            display: none;
+        }
         .main__hero {
             display: none;
             padding: 2.4rem;
@@ -48,7 +51,6 @@
                 padding-top: 9.8rem;
                 padding-bottom: 9.8rem;
                 img {
-                    // width: 11.1rem;
                     height: 11.1rem;
                     margin: 0 auto;
                 }
@@ -128,4 +130,98 @@
             display: block;
         }
     }
+}
+
+
+// TABLET MEDIA QUERIES
+@media (min-width: 768px) {
+    .main {
+        .main__container {
+            .main__tabs {
+                display: none;
+                border: none;
+                .main__tab {
+
+                }
+            }
+            // MY FIRST BIG GRID EXPERIMENT
+            .main__hero.active {
+                display: grid;
+                justify-items: center;
+                align-items: center;
+                grid-template-columns: repeat(4, 3fr);
+                // grid-template-rows: repeat(3, 1fr);
+                // grid-template-columns: 3fr 3fr 3fr 3fr;
+                // grid-template-rows: 5.4fr 2.9fr 0.17fr;
+                // grid-template-rows: 5fr 3fr 2fr;
+                grid-template-rows: 15fr 9fr 4fr;
+
+
+
+                grid-template-areas: 
+                    "planet planet planet planet"
+                    "text text tabs tabs"
+                    "table table table table"
+                    ;
+               .main__img {
+                    grid-area: planet;              
+                    // grid-column: 1/5;
+                    // grid-row: 1/2;
+
+                    // OR
+                    // grid-column-start: 1;
+                    // grid-column-end: 5;
+                    // grid-row-start: row1-start;
+                    // grid-row-end: 2;
+                    padding: 0;
+                   img {
+                    height: 18.4rem;
+                   }
+               }
+               .main__text {
+                    grid-area: text;              
+                   .main__text-heading {
+                    // grid-column-start: 1;
+                    // grid-column-end: 5;
+                    // grid-row-start: row1-start;
+                    // grid-row-end: 2;   
+                   }
+                   .main__text-paragraph {
+
+                   }
+                   .main__text-source {
+                       .main__text-source-link {
+
+                       }
+                       .icon-source {
+
+                       }
+                   }
+               }
+               .main__tabs.hide-for-mobile {
+                grid-area: tabs;              
+                display: block;
+                border: none;
+               }
+               .main__table {
+                    grid-area: table;
+                    // grid-column: 1/5;
+                    // grid-row: 3/4;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    margin: 0;
+                    .main__item {
+                        display: block;
+                        width: 16.4rem;
+                        height: 8.8rem;
+                        margin: 0;
+                    }
+               }
+            }
+        }
+    }
+
+
 }
