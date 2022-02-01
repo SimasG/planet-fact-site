@@ -322,6 +322,9 @@ p {
 }
 
 @media (min-width: 1300px) {
+  .header {
+    padding: 2.45rem 4rem 2.45rem 3.2rem;
+  }
   .header .header__nav-container {
     display: -ms-grid;
     display: grid;
@@ -335,6 +338,8 @@ p {
         grid-template-rows: 1 1fr;
   }
   .header .header__nav-container .header__links {
+    margin-bottom: -1rem;
+    padding: 0;
     width: 100%;
   }
   .header .header__nav-container .header__links .header__links-list .planet-name::before {
@@ -714,12 +719,29 @@ p {
     -ms-grid-column: 3;
     -ms-grid-column-span: 2;
     grid-area: text;
+    width: 35rem;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .main .main__container .main__hero.active .main__text .main__text-heading {
+    font-size: var(--heading);
+    margin-bottom: 3rem;
+  }
+  .main .main__container .main__hero.active .main__text .main__text-paragraph {
+    font-size: var(--paragraph);
+    line-height: 2.5rem;
+    padding: 0;
+    margin-bottom: 3rem;
   }
   .main .main__container .main__hero.active .main__tabs.hide-for-mobile {
     -ms-grid-row: 2;
     -ms-grid-column: 3;
     -ms-grid-column-span: 2;
     grid-area: tabs;
+  }
+  .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab {
+    width: 35rem;
+    height: 4.8rem;
   }
   .main .main__container .main__hero.active .main__tabs.hide-for-mobile .main__tab::before {
     display: none;
@@ -745,16 +767,35 @@ p {
     color: var(--white);
     opacity: 0.6;
     margin-right: 1.4rem;
+    font-size: var(--heading-tertiary);
+    letter-spacing: 0.257rem;
   }
   .main .main__container .main__hero.active .main__tabs.hide-for-mobile .tab_title {
     color: white;
     opacity: 1;
+    font-size: var(--heading-tertiary);
+    letter-spacing: 0.257rem;
   }
   .main .main__container .main__hero.active .main__table {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 4;
     grid-area: table;
+  }
+  .main .main__container .main__hero.active .main__table .main__item {
+    width: 25.5rem;
+    height: 12.8rem;
+    padding: 2.6rem 2.2rem;
+  }
+  .main .main__container .main__hero.active .main__table .main__item .main__item-title {
+    font-size: var(--heading-quarternary);
+    letter-spacing: 0.1rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .main .main__container .main__hero.active .main__table .main__item .main__item-info {
+    font-size: var(--heading-secondary);
+    letter-spacing: -0.15rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

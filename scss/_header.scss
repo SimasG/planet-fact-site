@@ -199,6 +199,7 @@
 // DESKTOP MEDIA QUERIES
 @media (min-width: 1300px) {
     .header {
+        padding: 2.45rem 4rem 2.45rem 3.2rem;
         .header__nav-container {
             display: grid;
             justify-items: start;
@@ -208,7 +209,13 @@
             // grid-template-areas: "logo planet-name";
             // justify-content: space-between;
             // align-items: center;
+            .header__nav-container-child {
+                .header__logo {
+                }
+            }
             .header__links {
+                margin-bottom: -1rem;
+                padding: 0;
                 width: 100%;
                 .header__links-list {
                     .planet-name {
