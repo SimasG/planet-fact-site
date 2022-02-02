@@ -51,3 +51,24 @@ mainContainer.addEventListener('click', (e) => {
         element.classList.add('active');
     }
 })
+
+
+// JSON DATA
+
+
+// require -> nodejs built-in function
+
+// const jsonData = require('../data.json');
+// console.log(jsonData);
+
+// You can only use fetch when trying to fetch external files outside of your machine, not local ones.
+// That's why you have to start a live server instead of developing using files from files:///
+
+// ./data.json -> an argument of the file location you want to access
+const json = fetch('./data.json')
+    // returning a promise that resolves with a Response object. 
+  .then(response => response.json())
+    // using json() method to extract the JSON body content from the Response
+    // second promise resolves with the result of parsing the response body text as JSON.
+  .then(json => console.log(json));
+

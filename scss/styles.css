@@ -465,14 +465,13 @@ p {
 
 .main .main__container .main__hero .main__text .main__text-paragraph {
   font-family: 'Spartan', sans-serif;
-  font-size: var(--paragraph-mobile);
   line-height: 2.5rem;
   padding-bottom: 3rem;
 }
 
 .main .main__container .main__hero .main__text .main__text-source {
   font-family: 'Spartan', sans-serif;
-  font-size: var(--heading-tertiary);
+  font-size: 1.2rem;
   line-height: 2.5rem;
   opacity: 0.4;
   font-weight: 400;
@@ -484,6 +483,11 @@ p {
   font-weight: 700;
   cursor: pointer;
   top: -0.5rem;
+  font-size: 1.2rem;
+}
+
+.main .main__container .main__hero .main__text .main__text-source-link > p {
+  font-size: 1.2rem;
 }
 
 .main .main__container .main__hero .main__table {

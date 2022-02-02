@@ -72,13 +72,12 @@
                 }
                 .main__text-paragraph {
                     font-family: 'Spartan', sans-serif;
-                    font-size: var(--paragraph-mobile);
                     line-height: 2.5rem;
                     padding-bottom: 3rem;
                 }
                 .main__text-source {
                     font-family: 'Spartan', sans-serif;
-                    font-size: var(--heading-tertiary);
+                    font-size: 1.2rem;
                     line-height: 2.5rem;
                     opacity: 0.4;
                     font-weight: 400;
@@ -89,6 +88,10 @@
                     font-weight: 700;
                     cursor: pointer;
                     top: -0.5rem;
+                    font-size: 1.2rem;
+                }
+                .main__text-source-link > p {
+                    font-size: 1.2rem;
                 }
             }
             .main__table {
@@ -189,14 +192,6 @@
                        padding-right: 1rem;
 
                    }
-                //    .main__text-source {
-                //        .main__text-source-link {
-
-                //        }
-                //        .icon-source {
-
-                //        }
-                //    }
                }
                 .main__tabs.hide-for-mobile {
                 grid-area: tabs;  
